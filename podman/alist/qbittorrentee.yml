@@ -1,0 +1,14 @@
+version: "3"
+services:
+  qbittorrentee:
+    image: superng6/qbittorrentee
+    restart: always
+    network_mode: "host"
+    environment:
+      - PUID=33
+      - PGID=33
+      - TZ=Asia/Shanghai
+      - WEBUIPORT=30000
+    volumes:
+      - /data/qbittorrent:/config
+      - /data/downloads:/app/downloads
