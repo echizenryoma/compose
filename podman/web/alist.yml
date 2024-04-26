@@ -1,0 +1,12 @@
+version: '3'
+services:
+  server:
+    image: xhofe/alist:main
+    restart: always
+    network_mode: "host"
+    environment:
+      - PUID=33
+      - PGID=33
+      - UMASK=022
+    volumes:
+      - /data/alist:/opt/alist/data
