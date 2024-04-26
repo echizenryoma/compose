@@ -1,0 +1,8 @@
+version: '3'
+services:
+  wechat:
+    image: scavin/docker-efbv2
+    restart: always
+    network_mode: "host"
+    volumes:
+      - "/etc/ehforwarderbot:/root/.ehforwarderbot"
