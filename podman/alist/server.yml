@@ -10,3 +10,4 @@ services:
       - UMASK=022
     volumes:
       - /data/alist:/opt/alist/data
+      - /data/downloads:/opt/alist/data/local
