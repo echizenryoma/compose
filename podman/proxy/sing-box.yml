@@ -1,0 +1,12 @@
+version: '3'
+services:
+  sing-box:
+    image: ghcr.io/sagernet/sing-box:v1.8.9
+    restart: always
+    network_mode: "host"
+    command: ["-c", "/etc/sing-box/server.json", "run"]
+    volumes:
+      - /etc/gai.conf:/etc/gai.conf
+      - /var/ssl:/var/ssl
+      - /etc/sing-box:/etc/sing-box
+      - /var/log/sing-box:/var/log/sing-box
