@@ -1,0 +1,8 @@
+version: "3"
+services:
+  librespeed:
+    image: ghcr.io/mickkael/speedtest-go:master
+    restart: always
+    network_mode: "host"
+    volumes:
+      - /etc/librespeed/settings.toml:/app/settings.toml
