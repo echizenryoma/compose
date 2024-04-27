@@ -1,0 +1,17 @@
+version: "3"
+services:
+  aria2:
+    image: p3terx/aria2-pro
+    restart: always
+    network_mode: "host"
+    environment:
+      - PUID=33
+      - PGID=33
+      - UMASK_SET=022
+      - RPC_SECRET=${RPC_SECRET}
+      - RPC_PORT=6800
+      - LISTEN_PORT=6888
+    volumes:
+      - /data/aria2:/config
+      - /data/alist:/opt/alist/data
+      - /data/downloads:/downloads
