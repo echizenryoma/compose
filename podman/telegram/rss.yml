@@ -1,0 +1,11 @@
+version: '3'
+services:
+  rss:
+    image: rongronggg9/rss-to-telegram
+    restart: always
+    network_mode: "host"
+    environment:
+      - TOKEN=${TOKEN}
+      - MANAGER=${MANAGER}
+    volumes:
+      - /etc/rss:/app/config
