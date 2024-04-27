@@ -5,6 +5,7 @@ services:
     restart: always
     environment:
       - DOCKER_ENABLE_SECURITY=false
+      - SYSTEM_ROOTURIPATH=/${SYSTEM_ROOTURIPATH}
     volumes:
       - /usr/share/tessdata:/usr/share/tessdata
       - /etc/striling-pdf:/configs
