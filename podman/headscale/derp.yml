@@ -3,6 +3,8 @@ services:
   derper:
     image: fredliang/derper
     user: "0:9418"
+    restart: always
+    network_mode: "host"
     environment:
       - DERP_DOMAIN=${DERP_DOMAIN}
       - DERP_CERT_MODE=manual
