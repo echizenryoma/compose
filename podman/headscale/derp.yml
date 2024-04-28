@@ -1,0 +1,16 @@
+version: '3'
+services:
+  derper:
+    image: fredliang/derper
+    user: "0:9418"
+    environment:
+      - DERP_DOMAIN=${DERP_DOMAIN}
+      - DERP_CERT_MODE=manual
+      - DERP_STUN=true
+      - DERP_STUN_PORT=${DERP_STUN_PORT}
+      - DERP_ADDR=${DERP_ADDR}
+      - DERP_HTTP_PORT=-1
+      - DERP_VERIFY_CLIENTS=true
+    volumes:
+      - /var/ssl:/app/certs
+      - /var/run/tailscale/tailscaled.sock:/var/run/tailscale/tailscaled.sock
