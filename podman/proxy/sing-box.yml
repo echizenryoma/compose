@@ -2,7 +2,7 @@ version: '3'
 services:
   sing-box:
     image: ghcr.io/sagernet/sing-box:latest
-    restart: always
+    restart: unless-stopped
     network_mode: "host"
     command: ["-c", "/etc/sing-box/server.json", "run"]
     volumes:

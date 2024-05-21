@@ -3,7 +3,7 @@ services:
   derper:
     image: fredliang/derper
     user: "0:9418"
-    restart: always
+    restart: unless-stopped
     network_mode: "host"
     environment:
       - DERP_DOMAIN=${DERP_DOMAIN}

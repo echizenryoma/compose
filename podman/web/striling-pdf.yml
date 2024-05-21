@@ -2,7 +2,7 @@ version: "3"
 services:
   striling-pdf:
     image: frooodle/s-pdf
-    restart: always
+    restart: unless-stopped
     environment:
       - DOCKER_ENABLE_SECURITY=false
       - SYSTEM_ROOTURIPATH=/${SYSTEM_ROOTURIPATH}
