@@ -2,7 +2,7 @@ version: '3'
 services:
   rss:
     image: rongronggg9/rss-to-telegram
-    restart: unless-stopped
+    restart: always
     network_mode: "host"
     environment:
       - TOKEN=${TOKEN}

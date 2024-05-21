@@ -2,7 +2,7 @@ version: '3'
 services:
   amule:
     image: ngosang/amule
-    restart: unless-stopped
+    restart: always
     network_mode: "host"
     environment:
       - PUID=33

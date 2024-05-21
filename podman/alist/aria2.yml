@@ -2,7 +2,7 @@ version: "3"
 services:
   aria2:
     image: p3terx/aria2-pro
-    restart: unless-stopped
+    restart: always
     network_mode: "host"
     environment:
       - PUID=33

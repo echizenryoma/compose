@@ -2,7 +2,7 @@ version: '3'
 services:
   server:
     image: xhofe/alist:main
-    restart: unless-stopped
+    restart: always
     network_mode: "host"
     environment:
       - PUID=33

@@ -2,7 +2,7 @@ version: "3"
 services:
   rust:
     image: idoge/stat_server
-    restart: unless-stopped
+    restart: always
     network_mode: "host"
     volumes:
       - /etc/localtime:/etc/localtime:ro

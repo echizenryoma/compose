@@ -2,6 +2,6 @@ version: '3'
 services:
   ui:
     image: goodieshq/headscale-admin:dev
-    restart: unless-stopped
+    restart: always
     ports:
       - "5000:80"
