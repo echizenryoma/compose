@@ -1,0 +1,16 @@
+version: '3'
+services:
+  bitwarden:
+    image: ngosang/amule
+    restart: unless-stopped
+    network_mode: "host"
+    environment:
+      - PUID=33
+      - PGID=33
+      - TZ=Asia/Shanghai
+      - GUI_PWD=${GUI_PWD}
+      - WEBUI_PWD=${GUI_PWD}
+    volumes:
+      - /data/amule/config:/home/amule/.aMule
+      - /data/downloads/amule:/incoming
+      - /data/amule/temp:/temp
