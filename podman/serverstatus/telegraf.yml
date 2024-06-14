@@ -1,0 +1,11 @@
+version: "3"
+services:
+  rust:
+    image: telegraf
+    restart: always
+    network_mode: "host"
+    command:
+      - "--config-directory"
+      - "/etc/telegraf"
+    volumes:
+      - /etc/telegraf:/etc/telegraf
