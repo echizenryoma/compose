@@ -4,6 +4,8 @@ services:
     image: telegraf
     restart: always
     network_mode: "host"
+    cap_add:
+      - CAP_NET_RAW
     command:
       - "--config-directory"
       - "/etc/telegraf"
