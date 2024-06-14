@@ -5,5 +5,5 @@ services:
     restart: always
     network_mode: "host"
     volumes:
-      - /opt/influxdb2/data:/var/lib/influxdb2
-      - /opt/influxdb2/config:/etc/influxdb2
+      - /opt/influxdb/data:/var/lib/influxdb2
+      - /opt/influxdb/config:/etc/influxdb2
