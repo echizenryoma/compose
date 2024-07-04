@@ -9,5 +9,3 @@ services:
     volumes:
       - /opt/wallos/db:/var/www/html/db
       - /opt/wallos/logos:/var/www/html/images/uploads/logos
-    ports:
-      - 8282:80
