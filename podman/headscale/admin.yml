@@ -4,4 +4,4 @@ services:
     image: goodieshq/headscale-admin:dev
     restart: always
     ports:
-      - "5000:80"
+      - "127.0.0.1:5000:80"
