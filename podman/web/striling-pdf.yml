@@ -11,4 +11,4 @@ services:
       - /etc/striling-pdf:/configs
       - /var/log/striling-pdf:/logs
     ports:
-      - "4728:8080"
+      - "127.0.0.1:4728:8080"
