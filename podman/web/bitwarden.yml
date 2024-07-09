@@ -9,6 +9,5 @@ services:
       - ADMIN_TOKEN=${ADMIN_TOKEN}
     ports:
       - "127.0.0.1:3011:80"
-      - "127.0.0.1:3012:3012"
     volumes:
       - /opt/bitwarden:/data
